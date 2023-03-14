@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastro de clientes</title>
+
+    <style>
+
+        .texto
+        {
+            height: 400px;
+            width: 700px;
+            font-size: medium;
+        }
+
+        .caixa-larga
+        {
+            height: 10px;
+            width: 100px;
+            position: relative;
+            right: -100px;
+        }
+
+        .botoes
+        {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+        }
+
+
+        .botao
+        {
+            margin-left: 20px;
+            width: 80px;
+            height: 50px;
+            background-color: beige;
+            font-size: 20px;
+        }
+
+        .botao:hover
+        {
+            background-color: green;
+        }
+
+        .logo
+        {
+            width: 50px;
+            height: 50px;
+            background-color: powderblue;
+            animation: vaivai 5s alternate infinite;
+        }
+
+        @keyframes vaivai {
+            0%{margin-left:0px;}
+            100%{margin-left:95%; background-color: brown; rotate: 90deg;}
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="logo"> </div>
+
+    <fieldset>
+
+        <legend>  dados pessoais  </legend>
+            
+        nome: <input type="text" class="caixa-larga" id="nome">
+        <br> <br>
+        endereço: <input type="text" class="caixa-larga" id="endereco">
+        <br> <br>
+        cidade: <input type="text" class="caixa-larga" id="cidade">
+        <br> <br>
+        estado: <select id="estado" class="estado">
+            <option >santa catarina</option> 
+            <option>alagoas</option>
+            <option>parana</option>
+            <option>sergipe</option>
+            <option>barara</option>
+
+    </fieldset>
+            <br> <br>
+    <fieldset>
+            <br> <br>
+        <legend> dados profissionais </legend>
+            <br> <br>
+        natureza do cargo:
+            <br> <br>
+        <input type="radio" class="cargos" id="gerencia" name="cargos"> gerencia
+            <br> <br>
+        <input type="radio" class="cargos" id="administrativo" name="cargos"> administrativo
+            <br> <br>
+        <input type="radio" class="cargos" id="juridico" name="cargos"> juridico
+            <br> <br>
+
+        area de interesse:
+
+        <br> <br>
+
+        <input type="checkbox" class="areas" id="computação">computação
+
+        <input type="checkbox" class="areas" id="biologia">biologia
+
+        <input type="checkbox" class="areas" id="meio_ambiente">meio ambiente
+
+        <input type="checkbox" class="areas" id="engenharia">engenharia
+
+        <input type="checkbox" class="areas" id="historia">História
+
+        <br> <br>
+
+        minicurriculo: <br>
+
+        <a href="https://www.vagas.com.br/profissoes/conseguir-emprego-pelo-vagas/" target="_blank">
+            (veja dicas de como fazer seu curriculo)
+        </a>
+        <br>
+        <textarea class="texto" id="curriculo"> </textarea>
+
+    </fieldset>
+        <div class="botoes">
+
+            <button class="botao">enviar</button>
+            <button class="botao" onclick="limpatudo()">apagar</button>
+
+        </div>
+</body>
+
+    <script>
+
+        function limpatudo()
+        {
+            nome.value = "";
+            endereco.value = "";
+            cidade.value = "";
+            gerencia.checked = false;
+            administrativo.checked = false;
+            juridico.checked = false;
+            computacao.value = "";
+            biologia.value = "";
+            meio_ambiente.value = "";
+            engenharia.value = "";
+            historia.value = "";
+            curriculo.value = "";
+        }
+
+    </script>
+a
+</html>     
